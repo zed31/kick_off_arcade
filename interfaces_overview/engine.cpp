@@ -41,7 +41,7 @@ static void load_engine() {
             arr[1] = std::make_unique<Shape::Triangle>();
         } else {
             std::cout << "Unrecognized shape..." << std::endl;
-            load_engine();
+            continue;
         }
 
         std::cout << "Drawing some shape now...." << std::endl;

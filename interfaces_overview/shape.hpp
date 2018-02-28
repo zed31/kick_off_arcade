@@ -10,6 +10,7 @@ class Shape {
 public:
     virtual ~Shape() = default;
 
+    //Common function to all derived class
     //Put const here add compile-time contract 
     //that could be hard to maintain
     virtual void intersec() = 0;
