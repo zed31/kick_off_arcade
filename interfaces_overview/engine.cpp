@@ -20,8 +20,8 @@ static void load_engine() {
         shape_array arr; 
 
         std::cout << "Choose what you want to draw" << std::endl;
-        std::cout << "C: draw 2 cylinders shape" << std::endl;
-        std::cout << "T: draw 2 triangles shape" << std::endl;
+        std::cout << "C: draw 2 cylinders shapes" << std::endl;
+        std::cout << "T: draw 2 triangles shapes" << std::endl;
 
         std::cout << ">> ";
 
@@ -46,9 +46,9 @@ static void load_engine() {
 
         std::cout << "Drawing some shape now...." << std::endl;
 
-        //Loop through the array and call the third parameter which is a function
-        //which call the intersec from the data 
-        std::for_each(arr.begin(), arr.end(), [](auto&& data) { data->intersec(); });
+        //Loops through the array and calls the third parameter which is a function
+        //which calls the draw from the data 
+        std::for_each(arr.begin(), arr.end(), [](auto&& data) { data->draw(); });
     }
 }
 
