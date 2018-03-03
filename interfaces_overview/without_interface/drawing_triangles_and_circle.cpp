@@ -16,7 +16,10 @@ int main() {
 
     //Array of triangles definition
     triangle_array triangles{ Shape::Triangle{}, Shape::Triangle{} };
-    
+
+    //Array of triangles definition
+    cylinder_array cylinders{ Shape::Cylinder{}, Shape::Cylinder{} };
+
     //If there is another type of shape: we must define a container for it
     //it generate hard code to maintain
 
@@ -25,6 +28,11 @@ int main() {
 
     //We iterate through the array of triangles
     std::for_each(triangles.begin(), triangles.end(), [] (auto&& item) { item.draw(); } );
+    
+    //We iterate through the array of cylinders
+    std::for_each(cylinders.begin(), cylinders.end(), [] (auto&& item) { item.draw(); } );
+
+    //...
 
     //If there are more shapes: we need to iterate over those as well
     //So creating even more loops, repeating more code, ...
