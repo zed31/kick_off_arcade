@@ -8,7 +8,7 @@ int main () {
     Shape::Circle c1;
     Shape::Circle c2;
 
-    c1.intersec();
-    c2.intersec();
+    c1.draw();
+    c2.draw();
     return 0;
 }
