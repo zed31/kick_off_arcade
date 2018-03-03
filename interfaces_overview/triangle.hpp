@@ -6,9 +6,10 @@
 
 namespace Shape {
 
+//Concrete class Triangle
 class Triangle : public Shape {
 public:
-    void intersec() override { std::cout << "I draw a triangle" << std::endl; };
+    void draw() override { std::cout << "I draw a triangle" << std::endl; };
 };
 
 } // namespace
