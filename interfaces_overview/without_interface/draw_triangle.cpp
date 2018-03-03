@@ -6,7 +6,7 @@ int main () {
     Shape::Triangle t1;
     Shape::Triangle t2;
 
-    t1.intersec();
-    t2.intersec();
+    t1.draw();
+    t2.draw();
     return 0;
 }
