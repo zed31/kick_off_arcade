@@ -17,7 +17,7 @@ int main() {
     //Array of triangles definition
     triangle_array triangles{ Shape::Triangle{}, Shape::Triangle{} };
     
-    //If we have another type of shape: We must define a container with its type
+    //If there is another type of shape: we must define a container for it
     //it generate hard code to maintain
 
     //We iterate through the array of circles
@@ -26,6 +26,6 @@ int main() {
     //We iterate through the array of triangles
     std::for_each(triangles.begin(), triangles.end(), [] (auto&& item) { item.draw(); } );
 
-    //If we have more shape: We need to iterate through those as well
-    //So create even more loops
+    //If there is more shape: we need to iterate through those as well
+    //So create even more loops, repeat more code, ...
 }
