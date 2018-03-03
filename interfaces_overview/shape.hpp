@@ -3,12 +3,10 @@
 
 namespace Shape {
 
-/*
- * Nothing concrete here, a shape is too general
-*/
-class Shape {
+//General behavior of the shape
+class Drawable {
 public:
-    virtual ~Shape() = default;
+    virtual ~Drawable() = default;
 
     //Function common to every derived classes
     //Putting const here adds compile-time contract hard to maintain
