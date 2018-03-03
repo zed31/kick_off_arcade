@@ -6,9 +6,10 @@
 
 namespace Shape {
 
+//Concrete class Circle
 class Circle : public Shape {
 public:
-    void intersec() override { std::cout << "I draw a circle" << std::endl; };
+    void draw() override { std::cout << "I draw a circle" << std::endl; };
 };
 
 } // namespace
