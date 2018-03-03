@@ -9,7 +9,7 @@ using circle_array = std::array<Shape::Circle, 2>;
 using triangle_array = std::array<Shape::Triangle, 2>;
 
 int main() {
-    std::cout << "Mix circles and triangles drawing..." << std::endl;
+    std::cout << "Mixing circle and triangle shapes..." << std::endl;
     
     //Array of circles definition
     circle_array circles{ Shape::Circle{}, Shape::Circle{} };
@@ -26,6 +26,6 @@ int main() {
     //We iterate through the array of triangles
     std::for_each(triangles.begin(), triangles.end(), [] (auto&& item) { item.draw(); } );
 
-    //If there is more shape: we need to iterate through those as well
-    //So create even more loops, repeat more code, ...
+    //If there are more shapes: we need to iterate over those as well
+    //So creating even more loops, repeating more code, ...
 }
