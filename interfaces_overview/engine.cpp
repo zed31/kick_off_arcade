@@ -20,7 +20,7 @@ static void load_engine() {
         shape_array arr; 
 
         std::cout << "Choose what you want to draw" << std::endl;
-        std::cout << "C: draw 2 cynlinders shape" << std::endl;
+        std::cout << "C: draw 2 cylinders shape" << std::endl;
         std::cout << "T: draw 2 triangles shape" << std::endl;
 
         std::cout << ">> ";
