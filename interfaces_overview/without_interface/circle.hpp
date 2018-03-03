@@ -7,7 +7,7 @@ namespace Shape {
 
 class Circle {
 public:
-    void intersec() { std::cout << "I'm drawing a circle..." << std::endl; };
+    void draw() { std::cout << "I'm drawing a circle..." << std::endl; };
 };
 
 } // namespace
