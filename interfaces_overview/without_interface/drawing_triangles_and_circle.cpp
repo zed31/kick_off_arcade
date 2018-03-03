@@ -21,10 +21,10 @@ int main() {
     //it generate hard code to maintain
 
     //We iterate through the array of circles
-    std::for_each(circles.begin(), circles.end(), [] (auto&& item) { item.intersec(); } );
+    std::for_each(circles.begin(), circles.end(), [] (auto&& item) { item.draw(); } );
 
     //We iterate through the array of triangles
-    std::for_each(triangles.begin(), triangles.end(), [] (auto&& item) { item.intersec(); } );
+    std::for_each(triangles.begin(), triangles.end(), [] (auto&& item) { item.draw(); } );
 
     //If we have more shape: We need to iterate through those as well
     //So create even more loops
