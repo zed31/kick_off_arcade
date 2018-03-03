@@ -1,52 +1,32 @@
-#include "circle.hpp"
-#include "shape.hpp"
-#include "triangle.hpp"
-#include "cylinder.hpp"
 #include <iostream>
 #include <memory>
 #include <array>
 #include <algorithm>
 #include <fstream>
 #include <string>
+#include "circle.hpp"
+#include "shape.hpp"
+#include "triangle.hpp"
+#include "cylinder.hpp"
 
 constexpr std::size_t nbr_of_shape = 2;
 
 //Type aliases
-using shape_ptr = std::unique_ptr<Shape::Shape>;
+using shape_ptr = std::unique_ptr<Shape::Drawable>;
 using shape_array = std::array<shape_ptr, nbr_of_shape>;
 
 static void load_engine() {
     while (1) {
         shape_array arr; 
-
-        std::cout << "Choose what you want to draw" << std::endl;
-        std::cout << "C: draw 2 cylinders shapes" << std::endl;
-        std::cout << "T: draw 2 triangles shapes" << std::endl;
-
-        std::cout << ">> ";
-
-        //Retrieve the stdin from the user
-        std::string line{};
-        std::getline(std::cin, line);
-
-        //Check if the input is either a cylinder or a triangle
-        //Recall the load_engine otherwise
-        if (line == "C") {
-            std::cout << "Generating 2 cylinders..." << std::endl;
-            arr[0] = std::make_unique<Shape::Cylinder>();
-            arr[1] = std::make_unique<Shape::Cylinder>();
-        } else if (line == "T") {
-            std::cout << "Generating 2 triangles..." << std::endl;
-            arr[0] = std::make_unique<Shape::Triangle>();
-            arr[1] = std::make_unique<Shape::Triangle>();
-        } else {
-            std::cout << "Unrecognized shape..." << std::endl;
-            continue;
-        }
-
+        std::cout << "Initializing one circle and one triangle shape" << std::endl;
+        
+        //Initializing one circle and one triangle in the same container
+        arr[0] = std::make_unique<Shape::Circle>();
+        arr[1] = std::make_unique<Shape::Triangle>();
+        
         std::cout << "Drawing some shape now...." << std::endl;
 
-        //Loops through the array and calls the third parameter which is a function
+        //Loops over the array and calls the third parameter which is a function
         //which calls the draw from the data 
         std::for_each(arr.begin(), arr.end(), [](auto&& data) { data->draw(); });
     }
