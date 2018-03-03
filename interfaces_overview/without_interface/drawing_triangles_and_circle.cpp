@@ -11,10 +11,10 @@ using triangle_array = std::array<Shape::Triangle, 2>;
 int main() {
     std::cout << "Mix circles and triangles drawing..." << std::endl;
     
-    //Array of circle definition
+    //Array of circles definition
     circle_array circles{ Shape::Circle{}, Shape::Circle{} };
 
-    //Array of triangle definition
+    //Array of triangles definition
     triangle_array triangles{ Shape::Triangle{}, Shape::Triangle{} };
     
     //If we have another type of shape: We must define a container with its type
